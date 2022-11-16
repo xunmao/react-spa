@@ -1,6 +1,49 @@
-# Getting Started with Create React App
+# react-spa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 一、Git仓库
+
+### 1、在本地创建React工程
+
+通过React脚手架创建工程。
+
+### 2、在GitHub上创建仓库
+
+可以创建空白仓库，也可以创建一些带有初始文件的仓库。
+
+最好避免携带很多初始文件，以免后续操作中发生文件冲突。
+
+这里创建一个只带有LICENSE文件的仓库。
+
+### 3、将本地代码推送至GitHub仓库
+
+1. 设置远程分支
+```sh
+git remote add origin git@github.com:xunmao/react-spa.git
+```
+2. 更改分支名称（可选）
+```sh
+git branch -M main
+```
+3. 确认操作结果
+```sh
+git remote -v
+(output)
+origin  git@github.com:xunmao/react-spa.git (fetch)
+origin  git@github.com:xunmao/react-spa.git (push)
+```
+4. 设置上游分支
+```sh
+git branch --set-upstream-to=origin/main main
+```
+5. 如果在GitHub上创建的是空白仓库，可以跳过第6步
+6. 如果在GitHub上创建的仓库中包含初始文件，需要在本地进行合并（变基）
+```sh
+git pull --rebase
+```
+7. 将本地代码提交至GitHub
+```sh
+git push -u origin main
+```
 
 ## Available Scripts
 
