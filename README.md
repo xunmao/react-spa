@@ -45,7 +45,7 @@ git pull --rebase
 git push -u origin main
 ```
 
-## 脚手架文件
+## 二、脚手架文件
 
 ```
 /my_application
@@ -67,6 +67,17 @@ git push -u origin main
     /setupTests.js       <-- 自动化测试配置文件（需要jest-dom库的支持）
   ......
 ```
+
+## 三、组件化编码流程
+
+1. 拆分组件：拆分界面，抽取组件
+1. 实现静态组件：使用组件实现静态页面效果
+1. 实现动态组件
+    1. 动态显示初始化数据
+        1. 数据类型
+        1. 数据名称
+        1. 保存在哪个组件
+    2. 交互（从绑定事件监听开始）
 
 ## Available Scripts
 
