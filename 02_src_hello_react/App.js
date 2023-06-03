@@ -63,6 +63,7 @@ import React, { Component } from "react"
 import Hello from "./components/Hello/Hello";
 // 【注意】由于使用了 index 作为文件名，因此可以省略
 import Welcome from "./components/Welcome";
+import Greeting from './components/Greeting/Greeting'
 
 class App extends Component {
   render() {
@@ -70,6 +71,7 @@ class App extends Component {
       <div>
         <Hello />
         <Welcome />
+        <Greeting />
       </div>
     );
   }

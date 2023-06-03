@@ -1,0 +1,21 @@
+/* 
+  样式的模块化
+  
+  【问题】
+  如果多个组件中出现相同的 class 样式，那么最后一个 class 的样式会覆盖前面的样式。
+  例如，在 Greeting 组件和 Hello 组件中，可能同时存在 title class。
+  
+  【解决方法】 
+  【方法1】less 样式文件，可以嵌套 class （这种方法比较常用）
+    .Greeting {
+      .title {
+        background-color: yellow;
+      }
+    }
+  【方法2】样式的模块化（这种方法比较少见）
+    将 css 文件的文件名改为 xxx.module.css，然后在 JSX 文件中作为 module 引入
+    import xxx from './xxx.module.css'
+  */
+.title {
+  background-color: yellow;
+}
