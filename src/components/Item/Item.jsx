@@ -15,13 +15,24 @@ export default class Item extends Component {
     this.setState({ isMouseHover: false })
   }
 
+  handleChange = (event) => {
+    const { id, title } = this.props.data
+    const { checked } = event.target
+    const todoObj = {
+      id: id,
+      title: title,
+      isDone: checked
+    }
+    this.props.updateTodo(todoObj)
+  }
+
   render() {
     const { title, isDone } = this.props.data
     const { isMouseHover } = this.state
     return (
       <li onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >
         <label>
-          <input type="checkbox" defaultChecked={isDone} />
+          <input type="checkbox" defaultChecked={isDone} onChange={this.handleChange} />
           <span>{title}</span>
         </label>
         <button className='btn btn-danger' style={{ display: isMouseHover ? 'block' : 'none' }}>删除</button>
