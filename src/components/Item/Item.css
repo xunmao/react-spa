@@ -31,3 +31,7 @@ li::before {
 li:last-child {
   border-bottom: none;
 }
+
+li:hover {
+  background-color: #dddddd;
+}
