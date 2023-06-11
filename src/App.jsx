@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import './App.css'
 import Header from './components/Header/Header'
 import List from './components/List/List'
 import Footer from './components/Footer/Footer'
+import './App.css'
 
 export default class App extends Component {
 
@@ -43,6 +43,18 @@ export default class App extends Component {
     this.setState({ todos: newTodos })
   }
 
+  // 删除 todo 对象，将这个函数传给 List 组件，即可获取 List 组件中的数据
+  // 当 List 组件中的某个 todo 对象被删除时，可以通过该函数获得 id，并更新 todo 列表
+  deleteTodo = (id) => {
+    // 获取当前的 todo 列表
+    const { todos } = this.state
+    // 新建 todo 列表，找到需要删除的 todo 对象并删除，
+    // 将其他的 todo 对象放入新的 todo 列表
+    const newTodos = todos.filter(todo => todo.id !== id)
+    // 用新建的 todo 列表，替换当前的 todo 列表，完成 state 更新
+    this.setState({ todos: newTodos })
+  }
+
   render() {
     const { todos } = this.state
     return (
@@ -56,7 +68,7 @@ export default class App extends Component {
           {/* 
             要想让父组件传递数据给子组件，可以使用 props 传递。
           */}
-          <List todos={todos} updateTodo={this.updateTodo} />
+          <List todos={todos} updateTodo={this.updateTodo} deleteTodo={this.deleteTodo} />
           <Footer />
         </div>
       </div>

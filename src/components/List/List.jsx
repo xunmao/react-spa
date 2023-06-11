@@ -17,14 +17,16 @@ export default class List extends Component {
       })
     ).isRequired,
     // 检查 updateTodo 函数
-    updateTodo: PropTypes.func.isRequired
+    updateTodo: PropTypes.func.isRequired,
+    // 检查 deleteTodo 函数
+    deleteTodo: PropTypes.func.isRequired
   }
 
   render() {
-    const { todos, updateTodo } = this.props
+    const { todos, updateTodo, deleteTodo } = this.props
     return (
       <ul className='todo-list'>
-        {todos.map(todo => <Item data={todo} key={todo.id} updateTodo={updateTodo} />)}
+        {todos.map(todo => <Item data={todo} key={todo.id} updateTodo={updateTodo} deleteTodo={deleteTodo} />)}
       </ul>
     )
   }
