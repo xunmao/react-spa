@@ -60,7 +60,11 @@ export default class Item extends Component {
     return (
       <li onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >
         <label>
-          <input type="checkbox" defaultChecked={isDone} onChange={this.handleChange} />
+          {/* 
+          1. defaultChecked 只在第一次渲染组件时生效，之后即使 todo 的状态有变化，复选框也不会刷新
+          2. checked 会在 todo 状态变化时刷新复选框，但是，必须配合 onChange 回调使用，否则就被写死了
+           */}
+          <input type="checkbox" checked={isDone} onChange={this.handleChange} />
           <span>{title}</span>
         </label>
         <button className='btn btn-danger' style={{ display: isMouseHover ? 'block' : 'none' }} onClick={this.handleDelete(id)}>删除</button>

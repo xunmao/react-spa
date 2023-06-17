@@ -48,9 +48,34 @@ export default class App extends Component {
   deleteTodo = (id) => {
     // 获取当前的 todo 列表
     const { todos } = this.state
-    // 新建 todo 列表，找到需要删除的 todo 对象并删除，
+    // 新建 todo 列表，通过 id 找到需要删除的 todo 对象并删除，
     // 将其他的 todo 对象放入新的 todo 列表
     const newTodos = todos.filter(todo => todo.id !== id)
+    // 用新建的 todo 列表，替换当前的 todo 列表，完成 state 更新
+    this.setState({ todos: newTodos })
+  }
+
+  // 根据“全选”复选框更新 todo 事项的状态
+  selectAllTodos = (isAllSelected) => {
+    // 获取当前的 todo 列表
+    const { todos } = this.state
+    // 新建 todo 列表，将每一 todo 对象的状态更新为“全选”复选框的状态
+    const newTodos = todos.map((todo) => {
+      // ...todo 表示将 todo 对象上的属性解构出来，
+      // 然后，isDone 属性的值重新设定为 isAllSelected
+      return { ...todo, isDone: isAllSelected }
+    })
+    // 用新建的 todo 列表，替换当前的 todo 列表，完成 state 更新
+    this.setState({ todos: newTodos })
+  }
+
+  // 清除所有已完成的 todo 项目
+  clearIsDoneTodos = () => {
+    // 获取当前的 todo 列表
+    const { todos } = this.state
+    // 新建 todo 列表，找到已经完成的 todo 对象并删除，
+    // 将其他的 todo 对象放入新的 todo 列表
+    const newTodos = todos.filter(todo => !todo.isDone)
     // 用新建的 todo 列表，替换当前的 todo 列表，完成 state 更新
     this.setState({ todos: newTodos })
   }
@@ -69,7 +94,7 @@ export default class App extends Component {
             要想让父组件传递数据给子组件，可以使用 props 传递。
           */}
           <List todos={todos} updateTodo={this.updateTodo} deleteTodo={this.deleteTodo} />
-          <Footer />
+          <Footer todos={todos} selectAllTodos={this.selectAllTodos} clearIsDoneTodos={this.clearIsDoneTodos} />
         </div>
       </div>
     )
