@@ -40,11 +40,15 @@ export default class Footer extends Component {
       <div className='todo-footer'>
         <label>
           {/* 
-          1. 当已完成 todo 的数量等于全部 todo 的数量时，应该勾选“全选”复选框 
-          2. 当勾选“全选”复选框时，应该将所有 todo 的设置为已完成，即 isDone 设置为 true
-          3. 当取消“全选”复选框时，应该将所有 todo 的设置为未完成，即 isDone 设置为 false
+          1. 当同时满足以下条件时，勾选“全选”复选框
+            1. 当已完成 todo 的数量等于全部 todo 的数量时
+            2. 当 todo 事项的总数不等于零时
+          2. 根据是否全选更新 todo 的状态
+            1. 当勾选“全选”复选框时，应该将所有 todo 的设置为已完成，即 isDone 设置为 true
+            2. 当取消“全选”复选框时，应该将所有 todo 的设置为未完成，即 isDone 设置为 false
           */}
-          <input type="checkbox" checked={doneCount === todos.length} onChange={this.handleSelectAll} />
+          <input type="checkbox" checked={doneCount === todos.length && todos.length != 0}
+            onChange={this.handleSelectAll} />
           <span>全选</span>
         </label>
         <span>
