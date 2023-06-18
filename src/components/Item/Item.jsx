@@ -7,7 +7,7 @@ export default class Item extends Component {
   // 类型检查
   static propTypes = {
     // 检查 todo 对象
-    data: PropTypes.shape({
+    todo: PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       isDone: PropTypes.bool.isRequired
@@ -34,7 +34,7 @@ export default class Item extends Component {
 
   // 处理勾选 todo 条目事件的回调，勾选时表示 todo 条目已经完成
   handleChange = (event) => {
-    const { id, title } = this.props.data
+    const { id, title } = this.props.todo
     const { checked } = event.target
     const todoObj = {
       id: id,
@@ -55,7 +55,7 @@ export default class Item extends Component {
   }
 
   render() {
-    const { id, title, isDone } = this.props.data
+    const { id, title, isDone } = this.props.todo
     const { isMouseHover } = this.state
     return (
       <li onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >

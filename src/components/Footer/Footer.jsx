@@ -23,8 +23,8 @@ export default class Footer extends Component {
 
   // 处理全选的事件的回调，通知其他组件当前是否为全选状态
   handleSelectAll = (event) => {
-    const isAllSelected = event.target.checked
-    this.props.selectAllTodos(isAllSelected)
+    const { checked } = event.target
+    this.props.selectAllTodos(checked)
   }
 
   // 清除所有已完成的 todo 项目
@@ -47,7 +47,7 @@ export default class Footer extends Component {
             1. 当勾选“全选”复选框时，应该将所有 todo 的设置为已完成，即 isDone 设置为 true
             2. 当取消“全选”复选框时，应该将所有 todo 的设置为未完成，即 isDone 设置为 false
           */}
-          <input type="checkbox" checked={doneCount === todos.length && todos.length != 0}
+          <input type="checkbox" checked={doneCount === todos.length && todos.length !== 0}
             onChange={this.handleSelectAll} />
           <span>全选</span>
         </label>
