@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import './App.css'
 
 export default class App extends Component {
 
@@ -19,11 +20,15 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.getStudentsData} >点我获取学生数据</button>
-        <br />
-        <br />
-        <button onClick={this.getPostsData} >点我获取帖子数据</button>
+      <div className='container'>
+        <ul>
+          <li>
+            <button onClick={this.getStudentsData} >点我获取学生数据</button>
+          </li>
+          <li>
+            <button onClick={this.getPostsData} >点我获取帖子数据</button>
+          </li>
+        </ul>
       </div>
     )
   }
