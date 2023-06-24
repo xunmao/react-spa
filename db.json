@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "react-basics",
+      "author": "xunmao"
+    },
+    {
+      "id": 3,
+      "title": "react-spa",
+      "author": "xunmao"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "students": [
+    {
+      "id": "001",
+      "name": "Tom",
+      "age": 18
+    },
+    {
+      "id": "002",
+      "name": "Jerry",
+      "age": 19
+    },
+    {
+      "id": "003",
+      "name": "Tony",
+      "age": 20
+    }
+  ]
+}

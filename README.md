@@ -91,6 +91,10 @@ git push -u origin main
 1. 注意defaultChecked和checked的区别，类似的还有：defaultValue和value
 1. 状态在哪里，操作状态的方法就在哪里
 
+## React Ajax
+
+1. [React脚手架配置代理](src/README.md)
+
 ## Available Scripts
 
 In the project directory, you can run:
