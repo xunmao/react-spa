@@ -47,4 +47,4 @@ git push -u origin main
 1. [02-Hello-React](02_src_hello_react/README.md)
 1. [03-Todo-List](03_src_todo_list/README.md)
 1. [04-脚手架配置代理](04_src_配置代理/README.md)
-1. [05-GitHub-Search](04_src_配置代理/README.md)
+1. [05-GitHub-Search](05_src_github_search/README.md)
