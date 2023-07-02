@@ -1,7 +1,12 @@
+/* 
+  未解问题：使用Bootstrap之后，这里（.css文件中）的样式就不生效了，必须改成inline样式才生效
+*/
+
 .album {
   /* TODO */
 }
 
+/*
 .card {
   float: left;
   width: 33.333%;
@@ -10,12 +15,21 @@
   border: 1px solid #efefef;
   text-align: center;
 }
+*/
 
+/* 
+  > 组合器选择前一个元素的直接子代的节点。
+  https://developer.mozilla.org/zh-CN/docs/Web/CSS/Child_combinator
+*/
+/* 
 .card>img {
   margin-bottom: 0.75rem;
   border-radius: 100px;
 }
+*/
 
+/* 
 .card-text {
   font-size: 85%;
 }
+*/

@@ -76,6 +76,15 @@ git push -u origin main
 
 1. [React脚手架配置代理](04_src_配置代理/README.md)
 
+# GitHub搜索案例
+
+## 导入Bootstrap
+
+1. 参考链接  
+https://v5.bootcss.com/docs/getting-started/introduction/#quick-start
+2. 国内加速  
+https://www.bootcdn.cn/twitter-bootstrap/
+
 ## Available Scripts
 
 In the project directory, you can run:
