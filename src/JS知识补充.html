@@ -9,8 +9,8 @@
 
 <body>
   <script>
-    // 连续结构赋值
-    // 需要结构的对象比较复杂，例如下面的 person 对象
+    // 连续解构赋值
+    // 需要解构的对象比较复杂，例如下面的 person 对象
     const person = {
       name: {
         firstName: 'Jason',
@@ -19,8 +19,8 @@
       age: 24
     }
 
-    // 1. 将 person 对象结构为 name 对象和 age 属性
-    // 2. 将 name 对象继续结构为 firstName 属性和 lastName 属性
+    // 1. 将 person 对象解构为 name 对象和 age 属性
+    // 2. 将 name 对象继续解构为 firstName 属性和 lastName 属性
     // 3. 将 firstName 属性的值赋给新定义的 fn 变量；
     //    将 lastName 属性的值赋给新定义的 ln 变量
     const { name: { firstName: fn, lastName: ln }, age } = person
