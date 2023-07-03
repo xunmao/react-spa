@@ -75,11 +75,6 @@ https://create-react-app.dev/docs/proxying-api-requests-in-development/#configur
 
 ## 其他
 
-### FeHelper
-
-一个好用的浏览器插件：https://github.com/zxlie/FeHelper  
-主要是用于美化JSON，还有其他很多用途，后续可以尝试
-
 ### ChatGPT辅助学习
 
 #### 提问1

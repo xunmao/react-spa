@@ -11,7 +11,9 @@
 
 ## 各种插件
 
-[TODO]
+推荐使用以下插件来提升效率：
+1. VS Code 插件：ES7+ React/Redux/React-Native snippets ( https://github.com/ults-io/vscode-react-javascript-snippets )
+1. Chrome 插件：FeHelper ( https://github.com/zxlie/FeHelper ) 主要用于美化 JSON 格式文件
 
 ## 内容提要
 
