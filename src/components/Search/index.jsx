@@ -15,7 +15,7 @@ export default class Search extends Component {
     // 使用“模板字符串”来拼接请求
     // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Template_literals
     axios.get(`https://api.github.com/search/users?q=${username}`).then(
-      resp => { console.log('成功了', resp.data); },
+      resp => { this.props.saveUsers(resp.data.items) },
       err => { console.error('失败了', err); }
     )
   }
