@@ -21,8 +21,11 @@
 1. [01-脚手架自带文件](01-脚手架自带文件/README.md)
 1. [02-Hello-React](02_src_hello_react/README.md)
 1. [03-Todo-List](03_src_todo_list/README.md)
-1. [04-脚手架配置代理](04_src_配置代理/README.md)
+1. [04-Setup-Proxy](04_src_setup_proxy/README.md)
 1. [05-GitHub-Search](05_src_github_search/README.md)
+
+以`02-Hello-React`为例，将文件夹名称`02_src_hello_react`改为`src`即可确认该案例的实际效果。  
+另外，如果确认的是02至04这几个案例，还需要将`public/index.html`中引入的 Bootstrap 注释掉
 
 ## 参考信息
 
