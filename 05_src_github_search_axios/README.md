@@ -9,7 +9,7 @@ https://www.bootcdn.cn/twitter-bootstrap/
 
 ## JS知识补充
 
-连续解构赋值：[JS知识补充](src/JS知识补充.html)
+[连续解构赋值](./连续解构赋值.html)
 
 Github API for Search Users
 
