@@ -1,0 +1,1 @@
+export const SEARCH_TOPIC = Symbol('SEARCH_TOPIC')
