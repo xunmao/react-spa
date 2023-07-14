@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
+import "./index.css"
 
 export default class Search extends Component {
 
@@ -50,9 +51,10 @@ export default class Search extends Component {
   render() {
     return (
       <section>
-        <h3>Search Github Users</h3>
+        <h3 className='search-header'>Search Github Users</h3>
         <div className='mb-3'>
-          <input type="text" placeholder="enter the name you search" ref={currNode => this.usernameNode = currNode} />
+          <input type="text" placeholder="enter the name you search"
+            className='search-input' ref={currNode => this.usernameNode = currNode} />
           &nbsp;
           <button className='btn btn-primary' onClick={this.search} >Search</button>
         </div>

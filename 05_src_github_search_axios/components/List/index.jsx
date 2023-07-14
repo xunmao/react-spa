@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import "./index.css"
 
 export default class List extends Component {
 
@@ -23,7 +24,7 @@ export default class List extends Component {
       isFirst ? <h2>Enter a keyword to search.</h2> :
         isLoading ? <h2>Loading......</h2> :
           errMsg ? <h2 style={{ color: "red" }} > {errMsg} </h2> :
-            <div className="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-2 row-cols-md-4 g-4">
               {
                 users.map(
                   (user) => {
