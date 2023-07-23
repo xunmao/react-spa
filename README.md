@@ -24,6 +24,7 @@
 1. [04-Setup-Proxy](./04_src_setup_proxy/README.md)
 1. [05-GitHub-Search-Axios](./05_src_github_search_axios/README.md)
 1. [06-GitHub-Search-Pubsub](./06_src_github_search_pubsub/README.md)
+1. [07-GitHub-Search-Fetch](./07_src_github_search_fetch/README.md)
 
 以`02-Hello-React`为例，将文件夹名称`02_src_hello_react`改为`src`即可确认该案例的实际效果。  
 另外，如果确认的是02至04这几个案例，还需要将`public/index.html`中引入的 Bootstrap 注释掉
